@@ -1,12 +1,9 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Articles</title>
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-  </head>
-  <body>
+{%extends 'base.html'%}
+{%block title%}
+articles
+{%endblock%}
+
+{%block content%}
 <div class="container">
   <h1>Articles List</h1>
   {% for article in articles %}
@@ -15,5 +12,4 @@
   <p>{{article.date}}</p>
   {% endfor %}
 </div>
-  </body>
-</html>
+{%endblock%}
