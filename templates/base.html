@@ -12,6 +12,16 @@
   </head>
   <body>
     <h2><a href="{% url 'articles:list' %}">LOGO</a></h2>
+    <nav>
+      <ul>
+        <li>
+          <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">logout</button>
+          </form>
+        </li>
+      </ul>
+    </nav>
     <div class="wrapper">
 
     {% block content %}
